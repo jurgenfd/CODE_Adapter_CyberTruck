@@ -1,17 +1,18 @@
 ﻿namespace CODE_Adapter_CyberTruck
 {
-    internal class Car
+    internal class Car: IVehicle
     {
-        public int SpeedKpH { get; internal set; }
+        public int XLocation { get; private set; }
+        public int SpeedKpH { get; set; }
 
-        internal void Log()
+        public void Log()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Cars XLocaion = {0} meters", XLocation);
         }
 
-        internal void Move(int v)
+        public void Move(int deltaSeconds)
         {
-            throw new NotImplementedException();
+            XLocation += (int)(deltaSeconds * SpeedKpH / 3.6);
         }
     }
 }

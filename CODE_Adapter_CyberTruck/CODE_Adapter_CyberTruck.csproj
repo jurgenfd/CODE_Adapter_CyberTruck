@@ -7,4 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="CODE_Adapter_CyberTruck_lib">
+      <HintPath>CODE_Adapter_CyberTruck_lib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
